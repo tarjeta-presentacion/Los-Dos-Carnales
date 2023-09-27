@@ -1,0 +1,624 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100vw;
+  font-family: "Roboto", sans-serif;
+}
+
+@font-face {
+  font-family: Carnales;
+  src: url(../fuentes/Rumble\ Brave.otf);
+}
+@keyframes animateCnc {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(1450px);
+  }
+}
+@keyframes animateCnc480 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(380px);
+  }
+}
+@keyframes animateCnc960 {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(850px);
+  }
+}
+@keyframes animateList {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: -29px;
+  }
+  50% {
+    top: -55px;
+  }
+  75% {
+    top: -82px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes animateList480 {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: -18px;
+  }
+  50% {
+    top: -36px;
+  }
+  75% {
+    top: -54px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+@keyframes animateList960 {
+  0% {
+    top: 0px;
+  }
+  25% {
+    top: -18px;
+  }
+  50% {
+    top: -36px;
+  }
+  75% {
+    top: -52px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+.header {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  width: 100%;
+  height: 220px;
+  padding: 10px;
+  background: rgb(0, 0, 0);
+  box-shadow: 5px 5px 20px rgb(2, 175, 195);
+  border-bottom: 2px solid rgb(255, 255, 255);
+}
+.header .titulo_contacto {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 0;
+}
+.header .titulo_contacto .titulo img {
+  margin-top: -20px;
+  height: 175px;
+  rotate: -3deg;
+}
+.header .titulo_contacto .btncontacto {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  margin-top: -15px;
+}
+.header .titulo_contacto .btncontacto .btntitulo {
+  font-size: 28px;
+  color: rgb(255, 255, 255);
+  background: none;
+  padding: 0;
+  transition: 0.3s ease-in-out;
+}
+.header .titulo_contacto .btncontacto .btntitulo:hover {
+  color: rgb(2, 175, 195);
+  transform: translateY(-3px);
+}
+.header .titulo_contacto .btncontacto .btntitulo_whats {
+  font-size: 45px;
+  color: rgb(255, 255, 255);
+  background: none;
+  padding: 0;
+  transition: 0.3s ease-in-out;
+}
+.header .titulo_contacto .btncontacto .btntitulo_whats:hover {
+  color: rgb(54, 223, 85);
+  transform: translateY(-3px);
+}
+
+.foto {
+  position: relative;
+  margin-top: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.foto img {
+  height: 200px;
+  border-radius: 50%;
+  border: 2px solid rgb(2, 175, 195);
+  box-shadow: 3px 3px 25px rgb(0, 0, 0);
+  margin-bottom: 10px;
+}
+.foto span {
+  font-family: Carnales;
+  font-size: 45px;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.foto span:last-child {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  border-top: 2px solid rgb(2, 175, 195);
+  padding: 5px 20px;
+  letter-spacing: 5px;
+  margin-top: 5px;
+}
+
+.cotiza_ahora {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 75px;
+  gap: 10px;
+}
+.cotiza_ahora a {
+  text-decoration: none;
+}
+.cotiza_ahora a div {
+  position: relative;
+  background-image: url(../imagenes/burbuja.svg);
+  background-size: cover;
+  padding: 17px 80px;
+  background-color: black;
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgb(0, 229, 255);
+  box-shadow: 5px 5px 25px rgb(0, 229, 255);
+  animation: 7s animateAplicacion infinite;
+}
+.cotiza_ahora a div span {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #ffffff;
+  font-weight: 600;
+  letter-spacing: 3px;
+}
+.cotiza_ahora a div:hover {
+  background-color: rgba(0, 0, 0, 0.884);
+}
+.cotiza_ahora img {
+  width: 125px;
+  rotate: 10deg;
+}
+
+.nosotros {
+  position: relative;
+  width: 100%;
+  padding: 0px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 100px;
+  z-index: 100;
+}
+.nosotros .quienes_somos {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: Carnales;
+  letter-spacing: 3px;
+}
+.nosotros .eslogan {
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-top: 5px;
+  font-style: italic;
+}
+.nosotros .somos {
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+.mensaje_principal {
+  position: relative;
+  margin-top: 30px;
+  height: 100px;
+  width: 90%;
+  margin-left: 5vw;
+  background: rgb(0, 0, 0);
+  background: linear-gradient(20deg, rgb(0, 0, 0) 29%, rgb(2, 175, 195) 55%, rgb(0, 229, 255) 66%);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 5px 5px 20px rgb(0, 0, 0);
+}
+.mensaje_principal .conteiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.mensaje_principal .conteiner p {
+  position: absolute;
+  top: 40%;
+  margin-right: 5px;
+  font-size: 22px;
+  color: white;
+  font-family: "Bruno Ace", cursive;
+}
+.mensaje_principal .conteiner .list {
+  position: absolute;
+  height: 30px;
+  top: 40%;
+  right: 16%;
+  overflow: hidden;
+}
+.mensaje_principal .conteiner .list .list_item {
+  position: relative;
+  text-decoration: none;
+  list-style-type: none;
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--clr);
+  animation: 7s animateList infinite;
+  font-family: "Bruno Ace", cursive;
+}
+
+.servicios {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 60px;
+}
+.servicios .nuestros_servicios {
+  font-size: 40px;
+  font-weight: 600;
+  font-family: Carnales;
+  letter-spacing: 3px;
+}
+.servicios .categorias {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+}
+.servicios .categorias .servicio {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  height: 350px;
+  width: 280px;
+  box-shadow: 3px 3px 10px rgb(0, 229, 255);
+  border: 1px solid rgb(224, 224, 224);
+  border-radius: 20px;
+  overflow: hidden;
+}
+.servicios .categorias .servicio::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(2, 175, 195);
+  -webkit-clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+          clip-path: polygon(0% 0%, 0% 100%, 100% 100%);
+  opacity: 1;
+}
+.servicios .categorias .servicio img {
+  height: 220px;
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.712);
+  transition: 0.3s ease-in-out;
+  z-index: 1000;
+  margin-top: -30px;
+}
+.servicios .categorias .servicio img:hover {
+  transform: scale(0.95);
+}
+.servicios .categorias .servicio span {
+  margin-top: 14px;
+  color: rgb(0, 0, 0);
+  font-family: sans-serif;
+  margin-bottom: 0;
+  font-size: 18px;
+  padding-top: 0;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  font-weight: 400;
+  z-index: 1000;
+}
+.servicios .categorias .servicio .info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background-color: black;
+  box-shadow: 3px 3px 15px rgb(63, 94, 251);
+  -webkit-clip-path: none;
+          clip-path: none;
+  height: 35px;
+  width: 100%;
+  opacity: 1;
+  transition: 0.3s ease-in-out;
+  margin-top: 25px;
+}
+.servicios .categorias .servicio .info span {
+  color: white;
+  margin-bottom: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  z-index: 1000;
+}
+.servicios .categorias .servicio .info:hover {
+  opacity: 1;
+}
+.servicios .categorias .servicio:hover {
+  box-shadow: 3px 3px 15px rgb(0, 0, 0);
+  border: none;
+}
+
+.contacto {
+  position: fixed;
+  right: 5px;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.contacto .contenedor {
+  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+  background: rgb(0, 0, 0);
+  border: 1px solid rgba(255, 255, 255, 0.842);
+  box-shadow: 2px 2px 10px rgb(0, 229, 255);
+  height: 340px;
+  width: 50px;
+  transition: 0.5s;
+  border-radius: 30px;
+}
+.contacto .contenedor.active {
+  transition: 0.5s;
+  height: 130px;
+  width: 50px;
+}
+.contacto .contenedor.active2 {
+  transition: 0.5s;
+  flex-direction: row;
+  width: 320px;
+  justify-content: center;
+  gap: 50px;
+}
+.contacto .contenedor .qr2 img {
+  transition: 0.5s;
+  width: 0px;
+  visibility: hidden;
+  opacity: 0;
+}
+.contacto .contenedor .qr2.active2 img {
+  transition: 0.5s;
+  width: 200px;
+  visibility: visible;
+  opacity: 1;
+}
+.contacto .contenedor .botones {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-top: -10px;
+  gap: 28px;
+  transition: 0.5s;
+}
+.contacto .contenedor .botones a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.contacto .contenedor .botones a span {
+  color: white;
+  font-size: 15px;
+  font-family: "Montserrat", sans-serif;
+  transform: rotate(0deg);
+}
+.contacto .contenedor .botones .btn {
+  position: relative;
+  font-size: 25px;
+  color: white;
+  transition: 0.5s;
+}
+.contacto .contenedor .botones .btn:hover {
+  color: rgb(0, 229, 255);
+  transform: translateY(-3px);
+}
+.contacto .contenedor .botones.active :nth-child(3) {
+  visibility: hidden;
+}
+.contacto .contenedor .botones.active :nth-child(4) {
+  visibility: hidden;
+}
+.contacto .contenedor .botones.active :nth-child(5) {
+  visibility: hidden;
+}
+.contacto .contenedor .botones.active :nth-child(6) {
+  visibility: hidden;
+}
+
+@media screen and (max-width: 960px) {
+  .header {
+    width: 100%;
+    height: 150px;
+  }
+  .header .titulo_contacto .titulo img {
+    margin-top: -10px;
+    height: 100px;
+  }
+  .header .titulo_contacto .btncontacto {
+    margin-top: -7px;
+  }
+  .foto span:last-child {
+    margin-top: -7px;
+  }
+  .nosotros {
+    margin-top: 80px;
+  }
+  .nosotros .eslogan {
+    font-weight: 600;
+  }
+  .mensaje_principal .conteiner p {
+    left: 70px;
+    font-size: 15px;
+  }
+  .mensaje_principal .conteiner .list {
+    right: 11%;
+  }
+  .mensaje_principal .conteiner .list .list_item {
+    font-size: 15px;
+    animation: 7s animateList960 infinite;
+  }
+  .servicios .categorias .servicio {
+    height: 315px;
+  }
+  .servicios .categorias .servicio img {
+    height: 200px;
+  }
+  .servicios .categorias .servicio span {
+    font-size: 17px;
+  }
+  .servicios .categorias .servicio .info {
+    margin-top: 25px;
+  }
+  .servicios .categorias .servicio .info span {
+    margin-top: 18px;
+  }
+  .contacto {
+    bottom: 2px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header {
+    height: 180px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+  }
+  .header .titulo_contacto .titulo img {
+    margin-top: -10px;
+    height: 140px;
+    rotate: -5deg;
+  }
+  .header .titulo_contacto .btncontacto {
+    margin-top: -15px;
+  }
+  .foto {
+    margin-top: 35px;
+  }
+  .foto span {
+    margin-top: 10px;
+    font-size: 35px;
+  }
+  .foto span:last-child {
+    font-size: 14px;
+    padding: 5px 10px;
+    margin-top: -5px;
+  }
+  .cotiza_ahora {
+    margin-top: 75px;
+  }
+  .cotiza_ahora a div {
+    padding: 17px 40px;
+  }
+  .nosotros {
+    padding: 0px 30px;
+    margin-top: 100px;
+  }
+  .nosotros .quienes_somos {
+    font-size: 30px;
+    text-align: center;
+  }
+  .nosotros .eslogan {
+    font-size: 15px;
+    margin-top: -5px;
+  }
+  .mensaje_principal .conteiner p {
+    top: 30%;
+    left: 25px;
+    font-size: 14px;
+  }
+  .mensaje_principal .conteiner .list {
+    height: 15px;
+    top: 48%;
+    right: 31%;
+  }
+  .mensaje_principal .conteiner .list .list_item {
+    position: relative;
+    font-size: 14px;
+    animation: 7s animateList480 infinite;
+  }
+  .servicios {
+    margin-top: 80px;
+  }
+  .servicios .nuestros_servicios {
+    font-size: 30px;
+  }
+  .servicios .categorias .servicio {
+    width: 260px;
+  }
+  .servicios .categorias .servicio img {
+    height: 210px;
+  }
+  .contacto {
+    bottom: 5px;
+  }
+  .contacto .contenedor.active2 {
+    width: 385px;
+  }
+}/*# sourceMappingURL=styles.css.map */
